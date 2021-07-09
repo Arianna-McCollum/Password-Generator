@@ -3,8 +3,9 @@ The goal of this project was to create a user friendly secure password generator
 
 *what it should look like*
 
-
-
+![Screenshot (36)](https://user-images.githubusercontent.com/84581536/125112706-83cec280-e0b5-11eb-8aa8-f1af3a50e419.png)
+![Screenshot (37)](https://user-images.githubusercontent.com/84581536/125112739-8fba8480-e0b5-11eb-9ed0-cc16fd96efe9.png)
 
 
 *link to the deployed application*
+https://electrolion.github.io/Password-Generator/ 
