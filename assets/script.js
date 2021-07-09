@@ -10,13 +10,13 @@ function generatePassword() {
  
  password='';
  finalPassword='';
-  var charPrompt = window.prompt('How many characters?');
+  var charPrompt = window.prompt('How many characters would you like?');
 
    if (charPrompt >= 8 && charPrompt <= 128) {
       numberPrompt = window.confirm("Would you like to add numbers?");
       specialPrompt = window.confirm("Would you like to add special characters?");
-      lowerPrompt = window.confirm("Would you like lowercase letters?");
-      upperPrompt = window.confirm("Would you like uppercase letters?")
+      lowerPrompt = window.confirm("Would you like to add lowercase letters?");
+      upperPrompt = window.confirm("Would you like to add uppercase letters?")
     }
     else {
       window.alert("You need to pick between 8 and 128 characters!");
