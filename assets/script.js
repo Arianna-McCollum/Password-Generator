@@ -5,10 +5,11 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lower = "abcdefghijklmnopqrstuvwxyz";
-  var numbers = "0123456789";
+  var numbers = "01234567890123";
   var symbols = "!@#$%^&*_-+=";
  
- 
+ password='';
+ finalPassword='';
   var charPrompt = window.prompt('How many characters?');
 
    if (charPrompt >= 8 && charPrompt <= 123) {
@@ -17,7 +18,11 @@ function generatePassword() {
       lowerPrompt = window.confirm("Would you like lowercase letters?");
       upperPrompt = window.confirm("Would you like uppercase letters?")
     }
-
+    else {
+      window.alert("You need to pick between 8 and 123 characters!");
+      generatePassword();
+    }
+    password='';
     if (numberPrompt===true) {
       password += numbers
     }
@@ -37,8 +42,9 @@ function generatePassword() {
     var length =(charPrompt);
     for(var i = 0; i < length; i++){
       var random = Math.floor(Math.random() * password.length);
-      password += password[random];
+      finalPassword += password[random];
     }
+    return finalPassword;
 
 
 };
