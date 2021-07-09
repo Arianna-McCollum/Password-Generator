@@ -12,14 +12,14 @@ function generatePassword() {
  finalPassword='';
   var charPrompt = window.prompt('How many characters?');
 
-   if (charPrompt >= 8 && charPrompt <= 123) {
+   if (charPrompt >= 8 && charPrompt <= 128) {
       numberPrompt = window.confirm("Would you like to add numbers?");
       specialPrompt = window.confirm("Would you like to add special characters?");
       lowerPrompt = window.confirm("Would you like lowercase letters?");
       upperPrompt = window.confirm("Would you like uppercase letters?")
     }
     else {
-      window.alert("You need to pick between 8 and 123 characters!");
+      window.alert("You need to pick between 8 and 128 characters!");
       generatePassword();
     }
     password='';
@@ -37,6 +37,10 @@ function generatePassword() {
 
     if (upperPrompt===true) {
       password += upper
+    }
+    else{
+      window.alert("Please select at least one criteria!")
+      generatePassword();
     }
 
     var length =(charPrompt);
