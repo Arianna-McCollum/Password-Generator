@@ -5,7 +5,7 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lower = "abcdefghijklmnopqrstuvwxyz";
-  var numbers = "01234567890123";
+  var numbers = "01234567890";
   var symbols = "!@#$%^&*_-+=";
  
  password='';
@@ -16,12 +16,12 @@ function generatePassword() {
       numberPrompt = window.confirm("Would you like to add numbers?");
       specialPrompt = window.confirm("Would you like to add special characters?");
       lowerPrompt = window.confirm("Would you like to add lowercase letters?");
-      upperPrompt = window.confirm("Would you like to add uppercase letters?")
+      upperPrompt = window.confirm("Would you like to add uppercase letters?");
     }
     else {
       window.alert("You need to pick between 8 and 128 characters!");
       generatePassword();
-    }
+    };
     password='';
     if (numberPrompt===true) {
       password += numbers
@@ -38,8 +38,9 @@ function generatePassword() {
     if (upperPrompt===true) {
       password += upper
     }
-    else{
-      window.alert("Please select at least one criteria!")
+    
+    if (numberPrompt===false&&specialPrompt===false&&lowerPrompt===false&&upperPrompt===false){
+      window.alert("You need to select at least one criteria!")
       generatePassword();
     }
 
